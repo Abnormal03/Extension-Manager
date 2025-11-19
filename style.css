@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./assets/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900; 
+  font-stretch: 75% 125%; 
+  font-style: normal;
+}
+
+:root {
+    --bg-color:#050B21;
+    --card-bg-color: #1F2535;
+    --primary-txt-color: #FBFEFC;
+    --sec-text-color: #9EA3AB;
+    --main-color: #F15D51;
+    --button-color: #2F354D;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-weight: 400;
+    background: linear-gradient(to top, #0A1542, #050B21);
+    color: var(--primary-txt-color);
+    padding: 10px;
+    margin-bottom: 100px;
+    min-height: 100vh;
+}
+
+body.light {
+    background: hsl(211, 58%, 87%);
+    color: black;
+}
+
+.style-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2rem;
+    background: var(--card-bg-color);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.style-bar.light {
+    background: #FBFDFF;
+}
+
+.style-bar .themeBtn {
+    background: #2F354D;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+
+.themeBtn.light {
+    background:  #c9cacd;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.filter-bar h3 {
+    font-size: 30px;
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+button {
+    font-size: 20px;
+    background: var(--button-color);
+    color: var(--primary-txt-color);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+button.light {
+    background: #FBFDFF;
+    color: black;
+}
+
+button:hover {
+    transform: scale(1.04);
+}
+
+.filters .active {
+    background: var(--main-color);
+    color: black;
+}
+
+
+.extension-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.extension {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    background: var(--card-bg-color);
+    border-radius: 20px;
+    border: 1px solid #494E60;
+    max-width: 400px;
+    max-height: 200px;
+    gap: 30px;
+    transition: .5s ease;
+}
+
+.extension.light {
+    background: #FBFDFF;
+}
+
+.extension:hover {
+    box-shadow: 2px 2px 2px var(--main-color);
+    transform: scale(1.05);
+}
+
+.top-sec {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top-sec h3 {
+    margin-bottom: 5px;
+}
+
+.details p {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--sec-text-color);
+}
+
+p.light {
+    color: black;
+}
+
+.bottom-sec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.removeBtn {
+    color: inherit;
+    border: 1px solid #494E60;
+    background: transparent;
+    font-size: 15px;
+    transition: .3s ease;
+}
+
+.removeBtn.light {
+    color: black;
+}
+
+.removeBtn:hover{
+    border: 2px solid var(--main-color);
+}
+
+.extension .removeBtn:hover {
+    border: none;
+    background: var(--main-color);
+}
+
+.extension.light .removeBtn:hover{
+    border: none;
+    background: var(--main-color);
+}
+
+.toggle-switch-off {
+    height: 20px;
+    width: 40px;
+    border-radius: 30px;
+    background: var(--sec-text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+}
+
+.toggle-switch-on {
+    height: 20px;
+    width: 40px;
+    border-radius: 30px;
+    background: var(--sec-text-color);
+    cursor: pointer;
+    display: flex;
+    background: var(--main-color);
+}
+
+.slider {
+    height: 20px;
+    width: 20px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.toggle-switch-on .slider {
+    transform: translateX(20px);
+}
+
+
+@media (max-width: 650px){
+
+    .filter-bar {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 433px){
+    .extension {
+        max-width: 90%;
+    }
+}
+
+
